@@ -1,0 +1,28 @@
+<!-- Begin main -->
+<div id="main">
+    <!-- Begin Header -->
+    <div id="header">
+        <f:render partial="LogoPartial" />
+        <!--<div id="menubar">-->
+        <nav>
+            {mainMenu -> f:format.raw()}
+        </nav>
+        <!--</div>-->
+        <div id="breadCrumb">{breadCrumb -> f:format.raw()}</div>
+    </div>
+
+    <!--End Header -->
+
+
+    <!--Beginn Template -->
+    <f:render section="main" />
+    <!--End Template -->
+
+    <!--Begin Footer -->
+    <!--<f:render partial="FooterPartial" />-->
+    <div id="footer">
+        <f:format.raw>{copyright}</f:format.raw>
+    </div>
+    <!--End Footer -->
+    <!--End main -->
+</div>
