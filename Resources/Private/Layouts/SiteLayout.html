@@ -1,34 +1,37 @@
 <!-- Begin main -->
-<main>
-<div id="main">
+
+<div class="container">
     <!-- Begin Header -->
-    <header>
-    <div id="header">
-        <f:render partial="LogoPartial" />
-        <!--<div id="menubar">-->
-        <nav>
-            {mainMenu -> f:format.raw()}
-        </nav>
-        <!--</div>-->
-        <div id="breadCrumb">{breadCrumb -> f:format.raw()}</div>
+    <div class="container">
+        <header>
+            <div id="header">
+                <f:render partial="LogoPartial" />
+                <!--<div id="menubar">-->
+
+                <nav>
+                    {mainMenu -> f:format.raw()}
+                </nav>
+                <!--</div>-->
+                <div id="breadCrumb">{breadCrumb -> f:format.raw()}</div>
+
+            </div>
+        </header>
     </div>
-    </header>
 
     <!--End Header -->
 
-
-    <!--Beginn Template -->
-    <f:render section="main" />
-    <!--End Template -->
-
+    <main class="container">
+        <!--Beginn Template -->
+        <f:render section="main" />
+        <!--End Template -->
+    </main>
     <!--Begin Footer -->
     <!--<f:render partial="FooterPartial" />-->
-    <footer>
-    	<div id="footer">
-        	<f:format.raw>{copyright}</f:format.raw>
-    	</div>
-    	<!--End Footer -->
-    	<!--End main -->
+    <footer class="container">
+        <div id="footer">
+            <f:format.raw>{copyright}</f:format.raw>
+        </div>
+        <!--End Footer -->
+        <!--End main -->
     </footer>
 </div>
-</main>

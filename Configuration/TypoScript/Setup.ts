@@ -23,7 +23,7 @@ lib.content {
 lib.mainMenu = HMENU
 lib.mainMenu {
 
-    wrap = <ul>|</ul>
+    wrap = <ul class="nav justify-content-center nav-tabs">|</ul>
     1 = TMENU
     1 {
         expAll = 1
@@ -33,7 +33,7 @@ lib.mainMenu {
         }
         CUR = 1
         CUR {
-         wrapItemAndSub = <li class="selected">|</li>
+         wrapItemAndSub = <li class="nav-item">|</li>
          #doNotLinkIt = 1
       }
 
@@ -43,7 +43,7 @@ lib.mainMenu {
     2 < .1 
     
     3 = TMENU
-    3.wrap = <ul id="subMenu">|</ul>
+    3.wrap = <ul>|</ul>
     3.NO.wrapItemAndSub = <li>|</li>
 }
 
