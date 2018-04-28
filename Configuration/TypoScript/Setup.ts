@@ -123,8 +123,9 @@ page {
         10 < template
 
         includeCSS {
-                #mycss = {$systemPath}Public/Stylesheets/style.css
-                mycss = {$systemPath}Public/Stylesheets/fastFertigesStylesheet.css
+		#mycss = {$systemPath}Public/Stylesheets/style.css
+		mycss = {$systemPath}Public/Stylesheets/Bootstrap/css/bootstrap.min.css
+                #mycss = {$systemPath}Public/Stylesheets/fastFertigesStylesheet.css
         }
 }
 
