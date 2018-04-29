@@ -23,7 +23,7 @@ lib.content {
 lib.mainMenu = HMENU
 lib.mainMenu {
 
-    wrap = <ul class="nav justify-content-center nav-tabs">|</ul>
+    wrap = <ul>|</ul>
     1 = TMENU
     1 {
         expAll = 1
@@ -33,7 +33,7 @@ lib.mainMenu {
         }
         CUR = 1
         CUR {
-         wrapItemAndSub = <li class="nav-item">|</li>
+         wrapItemAndSub = <li>|</li>
          #doNotLinkIt = 1
       }
 
@@ -124,8 +124,8 @@ page {
 
         includeCSS {
 		#mycss = {$systemPath}Public/Stylesheets/style.css
-		mycss = {$systemPath}Public/Stylesheets/Bootstrap/css/bootstrap.min.css
-                #mycss = {$systemPath}Public/Stylesheets/fastFertigesStylesheet.css
+		bootstrapcss = {$systemPath}Public/Stylesheets/Bootstrap/css/bootstrap.min.css
+                mycss = {$systemPath}Public/Stylesheets/fastFertigesStylesheet.css
         }
 }
 

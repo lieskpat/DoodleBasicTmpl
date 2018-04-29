@@ -7,7 +7,7 @@ and open the template in the editor.
     Created on : 30.07.2017, 20:13:20
     Author     : lies
 */
-html
+/*html
 { height: 100%;}
 
 *
@@ -131,6 +131,7 @@ ol li
 { font-size: 100%;
   padding: 4px 0 0 0;
   color: black;}
+*/
 
 #menubar
 { width: 960px;
@@ -139,11 +140,11 @@ ol li
   background: #000;} 
 
 nav {
-  width: 960px;
-  height: 52px;
-  padding: 0;
-  margin: 0;
-  background: #000; 
+    width: 960px;
+    height: 52px;
+    padding: 0;
+    margin: 0;
+    background: #000; 
 }
 
 nav ul {
@@ -152,10 +153,10 @@ nav ul {
 }
 
 nav ul li{
-  float: left;
-  list-style: none;
-  position: relative;
-  padding: 0 0 0 0;  
+    float: left;
+    list-style: none;
+    position: relative;
+    padding: 0 0 0 0;  
 }
 
 nav ul li a {
@@ -184,18 +185,84 @@ nav a:hover {
     color: white;
 }
 
+ul#menu, ul#menu li
+{ float: left;
+  margin: 0; 
+  padding: 0;}
+
+ul#menu li { 
+    list-style: none;
+    position:relative;
+}
+
+ul#menu li a
+{ letter-spacing: 0.1em;
+  font: normal 100% arial, sans-serif;
+  display: block; 
+  float: left; 
+  height: 17px;
+  margin: 10px 0 0 10px;
+  padding: 9px 26px 6px 26px;
+  text-align: center;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;} 
+
+ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
+{ color: #FFF;
+  background: grey;
+}
+
+#subMenu {
+    position: absolute;
+    display: none;
+}
+
+#subMenu li a {
+    display: block;
+}
+
 #breadCrumb {
     width: 950px;
     height: 20px;
     padding: 0 0 0 10px;
-    /*background: #F0EFE2;*/
+    background: #F0EFE2;
     
 }
 
 #breadCrumb a {
     text-decoration: none;
 }
-/**
+
+ul#breadMenu, ul#breadMenu li {
+    float: left;
+    margin: 0;
+    padding: 0 10px 0 0;
+    list-style: none;
+}
+
+ul#breadMenu li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/*
+#breadCrumb {
+    width: 950px;
+    height: 20px;
+    padding: 0 0 0 10px;
+    background: #F0EFE2;
+    
+}
+
+#breadCrumb a {
+    text-decoration: none;
+}
+
 ul#breadMenu, ul#breadMenu li {
     float: left;
     margin: 0;
@@ -237,7 +304,7 @@ ul#menu li a
 ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 { color: #FFF;
   background: grey;
-}**/
+}
 
 #subMenu {
     position: absolute;
@@ -277,16 +344,17 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 .sidebar li a.selected
 { color: #7E2451;
   text-decoration: none;} 
-
+*/
+/**
 #content { 
     text-align: left;
-    /*float: left;*/
-    /*overflow: hidden;*/
-    /*width: 595px;*/
+    float: left;
+    overflow: hidden;
+    width: 595px;
     width: 710px;
     margin: 0;
     padding: 0 0 0 10px;
-    /*background: grey;*/
+    background: grey;
 }
 
 #twoColumns {
@@ -294,17 +362,17 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 }
 
 #secondColumnContent {
-    /*width: 300px;*/
+    width: 300px;
     margin-left: 370px;
     padding: 0;
-    /*border: 1px solid black;*/
+    border: 1px solid black;
 }
 
 #firstColumnContent {
     float: left;
     width: 355px;
     padding: 0;
-    /*border: 1px solid black;*/
+    border: 1px solid black;
 }
 
 #content ul
@@ -312,7 +380,7 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 
 #content ul li
 { list-style-type: none;
-  /*background: url(bullet.png) no-repeat;*/
+  background: url(bullet.png) no-repeat;
   margin: 0 0 6px 0; 
   padding: 0 0 4px 25px;
   line-height: 1.5em;}
@@ -413,3 +481,4 @@ table tr td
   color: #47433F;
   border-top: 1px solid #FFF;}
 
+**/
