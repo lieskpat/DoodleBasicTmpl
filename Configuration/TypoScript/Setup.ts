@@ -20,32 +20,118 @@ lib.content {
         select.where.insertData = 1
 }
 
-lib.mainMenu = HMENU
+#lib.bootstrap3-basic = COA
+#lib.bootstrap3-basic {
+lib.mainMenu = COA
 lib.mainMenu {
-
-    wrap = <ul>|</ul>
-    1 = TMENU
-    1 {
-        expAll = 1
-        NO = 1
-        NO {
-            wrapItemAndSub = <li>|</li>       
+    wrap = <nav class="navbar navbar-default"> <div class="container-fluid"> | </div> </nav>
+ 
+    10 = COA
+    10 {
+        wrap = <div class="navbar-header"> | </div>
+        10 = COA
+        10 {
+            // hamburger icon:
+            wrap = <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">|</button>
+            10 = TEXT
+            10.value = <span class="sr-only">Toggle navigation</span>
+            20 = TEXT
+            20.value = <span class="icon-bar"></span>
+            21 < .20
+            22 < .20
         }
-        CUR = 1
-        CUR {
-         wrapItemAndSub = <li>|</li>
-         #doNotLinkIt = 1
-      }
-
+ 
+        // company name/logo:
+        20 = TEXT
+        20.value = Extbase
+        20.typolink {
+            parameter = http://192.168.81.128/web/index.php?id=8
+            ATagParams = class="navbar-brand"
+        }
     }
-
-    2 = TMENU
-    2 < .1 
-    
-    3 = TMENU
-    3.wrap = <ul>|</ul>
-    3.NO.wrapItemAndSub = <li>|</li>
+ 
+    20 = HMENU
+    20 {
+        wrap = <div id="navbar" class="navbar-collapse collapse"> <ul class="nav navbar-nav"> | </ul> </div>
+ 
+        1 = TMENU
+        1 {
+            expAll = 1
+ 
+            NO = 1
+            NO {
+                ATagTitle.field = title
+                wrapItemAndSub = <li>|</li>
+            }
+ 
+            CUR < .NO
+            CUR {
+                wrapItemAndSub = <li class="active">|</li>
+            }
+ 
+            ACT < .CUR
+ 
+            IFSUB = 1
+            IFSUB {
+                ATagTitle.field = title
+                ATagParams = class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
+                linkWrap = |<b class="caret"></b>
+                ATagBeforeWrap = 1
+                wrapItemAndSub = <li class="dropdown">|</li>
+            }
+ 
+            ACTIFSUB < .IFSUB
+            ACTIFSUB {
+                wrapItemAndSub = <li class="dropdown active">|</li>
+            }
+ 
+            CURIFSUB < .ACTIFSUB
+        }
+ 
+        2 < .1
+        2 {
+            wrap = <ul class="dropdown-menu">|</ul>
+ 
+            // because default Bootstrap 3 doesn't support more submenu levels:
+            IFSUB >
+            ACTIFSUB >
+            CURIFSUB >
+ 
+            SPC = 1
+            SPC {
+                // no divider, if first menu item on this level (using optionSplit):
+                wrapItemAndSub = <li class="dropdown-header">|</li> |*| <li class="divider"></li><li class="dropdown-header">|</li>
+            }
+        }
+    }
 }
+
+#lib.mainMenu = HMENU
+#lib.mainMenu {
+
+#    wrap = <ul>|</ul>
+#    1 = TMENU
+#    1 {
+#        expAll = 1
+#        NO = 1
+#        NO {
+#            wrapItemAndSub = <li>|</li>       
+#        }
+#        CUR = 1
+#        CUR {
+#        wrapItemAndSub = <li>|</li>
+#         #doNotLinkIt = 1
+#      }
+#
+#    }
+
+#    2 = TMENU
+#    2 < .1 
+#    
+#    3 = TMENU
+#    3.wrap = <ul>|</ul>
+#    3.NO.wrapItemAndSub = <li>|</li>
+#}
 
 
 #lib.mainMenu = HMENU
@@ -125,7 +211,7 @@ page {
         includeCSS {
 		#mycss = {$systemPath}Public/Stylesheets/style.css
 		bootstrapcss = {$systemPath}Public/Stylesheets/Bootstrap/css/bootstrap.min.css
-                mycss = {$systemPath}Public/Stylesheets/fastFertigesStylesheet.css
+                #mycss = {$systemPath}Public/Stylesheets/fastFertigesStylesheet.css
         }
 }
 
